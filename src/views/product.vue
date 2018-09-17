@@ -17,8 +17,8 @@
                 v-bind:key="product.id"
             >
                 <img :src="product.image" /><br />
-                <div class="title">{{ product.name }}</div>
-                <div class="price">${{ product.price }}</div>
+                <div class="title"><p>{{ product.name }}</p></div>
+                <div class="price">{{ product.price }}</div>
                 <div class="select-box">
                    {{ product.quantity }}
                 </div>
@@ -31,16 +31,27 @@
     .products {
         background-color: #bdbdbd;
         color: #4a4a4a;
-        font-weight: 500;
         margin: 0 auto;
         padding: 20px;
 
-        h1 { color: #d33169; font-size: 1.8rem; font-weight: bold; }
+        .details {
+            margin: 0 0 30px;
+        }
 
-        .details { margin: 0 0 30px; }
-        .title { margin-top: 30px; text-align: center; }
-        .price { color: #d33169; font-weight: bold; text-align: center; }
-        .select-box {}
+        h1 {
+            color: #d33169;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        p {
+            font-weight: 500;
+        }
+
+        .title {
+            text-align: center;
+            width: 100%;
+        }
     }
 </style>
 
