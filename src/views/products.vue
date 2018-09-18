@@ -22,7 +22,7 @@
                 <div class="title">{{ product.name }}</div>
                 <div class="price">${{ product.price }}</div>
                 <div class="select-box">
-                    <select v-model="product.quantity">
+                    <select v-model="product.quantity" style="background-image: url(assets/images/arrow.png);">
                         <option v-for="n in 20" v-bind:key="n">{{ n }}</option>
                     </select>
                 </div>
@@ -48,6 +48,9 @@
             margin-top: 30px;
 
             select {
+                background: #fff no-repeat 65px center;
+                background-size: 25%;
+                border: 1px solid #24435a;
                 display: block;
                 margin: 0 auto;
                 max-width: 100px;

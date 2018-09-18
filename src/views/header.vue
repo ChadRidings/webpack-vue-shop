@@ -90,8 +90,8 @@
         name: "heading",
         data: () => ({
             section: 'heading section',
-            totalAmount: '',
-            totalQuantity: ''
+            totalAmount: '0',
+            totalQuantity: '0'
 
         }),
         methods: {
