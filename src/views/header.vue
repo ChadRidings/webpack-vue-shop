@@ -1,6 +1,6 @@
 <template>
     <div class="row heading">
-        <div class="large-8 columns">
+        <div class="heading-left">
             <img src="assets/images/logo.png" class="logo" />
             <div class="menu">
                 <span><a href="">Home</a></span>
@@ -9,14 +9,12 @@
                 <span><a href="">Order</a></span>
             </div>
         </div>
-        <drop @drop="handleDrop">
-            <div class="large-4 columns text-right">
-                <div class="total">
-                    Total Amount: ${{ totalAmount }} |
-                </div>
-                <div class="cart" style="background-image: url('./assets/images/cart.png')">
-                    <div class="quantity">{{ totalQuantity }}</div>
-                </div>
+        <drop @drop="handleDrop" class="heading-right">
+            <div class="total">
+                Total Amount: ${{ totalAmount }} |
+            </div>
+            <div class="cart" style="background-image: url('./assets/images/cart.png')">
+                <div class="quantity">{{ totalQuantity }}</div>
             </div>
         </drop>
     </div>
@@ -32,10 +30,45 @@
         padding: 8px 0;
         text-transform: uppercase;
 
-        .logo { display: inline-block; height: 40px; margin: 0 20px; }
+        .heading-left {
+            display: inline-block;
+            width: calc(100% - 270px);
+
+            @media screen and (max-width: 770px) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .heading-right {
+            display: inline-block;
+            padding: 0 10px;
+            width: 260px;
+
+            @media screen and (max-width: 770px) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .logo {
+            display: inline-block;
+            height: 40px;
+            margin: 0 20px;
+
+            @media screen and (max-width: 770px) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
 
         .menu {
             display: inline-block;
+
+            @media screen and (max-width: 770px) {
+                display: block;
+                text-align: center;
+            }
 
             a {
                 color: #fff;
@@ -50,7 +83,11 @@
             }
         }
 
-        .total { display: inline-block; }
+        .total {
+            display: inline-block;
+            width: calc(100% - 37px);
+            text-align: right;
+        }
 
         .cart {
             background-repeat: no-repeat;
@@ -62,7 +99,7 @@
             line-height: 40px;
             position: relative;
             width: 32px;
-            margin: 5px 20px 0 10px;
+            margin: 5px 0 0 5px;
 
             .quantity {
                 position: absolute;

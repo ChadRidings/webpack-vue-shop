@@ -1,6 +1,6 @@
 <template>
     <div class="products">
-        <div class="row details">
+        <div class="row">
             <div class="large-12 column">
                 <h1>Top Products</h1>
                 <p>
@@ -12,7 +12,7 @@
 
         <div class="row">
             <div
-                class="large-3 columns"
+                class="small-12 medium-6 large-3 columns"
                 v-for="product in products"
                 v-bind:key="product.id"
             >
@@ -41,7 +41,7 @@
 
         h1 { color: #d33169; font-size: 1.8rem; font-weight: bold; }
 
-        .details { margin: 0 0 30px; }
+        .product-image { margin: 30px 0 0 0; }
         .title { margin-top: 30px; text-align: center; }
         .price { color: #d33169; font-weight: bold; text-align: center; }
         
