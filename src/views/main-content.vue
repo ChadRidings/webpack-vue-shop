@@ -29,6 +29,6 @@
         },
         data: () => ({
             section: 'Main',
-        }),
+        })
     }
 </script>

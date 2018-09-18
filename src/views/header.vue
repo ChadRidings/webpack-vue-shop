@@ -9,14 +9,16 @@
                 <span><a href="">Order</a></span>
             </div>
         </div>
-        <div class="large-4 columns text-right">
-            <div class="total">
-                Total Amount: $35.00 |
+        <drop @drop="handleDrop">
+            <div class="large-4 columns text-right">
+                <div class="total">
+                    Total Amount: $35.00 |
+                </div>
+                <div class="cart" style="background-image: url('./assets/images/cart.png')">
+                    <div class="quantity">0</div>
+                </div>
             </div>
-            <div class="cart" style="background-image: url('./assets/images/cart.png')">
-                <div class="quantity">0</div>
-            </div>
-        </div>
+        </drop>
     </div>
 </template>
 
@@ -82,5 +84,10 @@
         data: () => ({
             section: 'heading section',
         }),
+        methods: {
+            handleDrop(data, event) {
+                alert(`You dropped with data: ${JSON.stringify(data)}`);
+            },
+        },
     }
 </script>
