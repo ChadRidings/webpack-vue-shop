@@ -12,10 +12,10 @@
         <drop @drop="handleDrop">
             <div class="large-4 columns text-right">
                 <div class="total">
-                    Total Amount: $35.00 |
+                    Total Amount: ${{ totalAmount }} |
                 </div>
                 <div class="cart" style="background-image: url('./assets/images/cart.png')">
-                    <div class="quantity">0</div>
+                    <div class="quantity">{{ totalQuantity }}</div>
                 </div>
             </div>
         </drop>
@@ -79,14 +79,35 @@
 </style>
 
 <script>
+    var purchaseQuantity = [];
+    var purchaseAmount = [];
+
+    function keepDecimal(num) {
+        return Number.parseFloat(num).toFixed(2);
+    }
+
     export default {
         name: "heading",
         data: () => ({
             section: 'heading section',
+            totalAmount: '',
+            totalQuantity: ''
+
         }),
         methods: {
             handleDrop(data, event) {
-                alert(`You dropped with data: ${JSON.stringify(data)}`);
+                var price = parseInt(data.product.price);
+                var quantity = parseInt(data.product.quantity);
+                var amount = price * quantity;
+
+                purchaseAmount.push(amount);
+                purchaseQuantity.push(quantity);
+
+                var grandTotal = purchaseAmount.reduce((accumulator, currentValue) => accumulator + currentValue);
+                var grandQuantity = purchaseQuantity.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+                this.$data.totalAmount = keepDecimal(grandTotal);
+                this.$data.totalQuantity = grandQuantity;
             },
         },
     }
