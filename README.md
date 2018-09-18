@@ -1,5 +1,7 @@
 # webpack-vue-shop
-## A drag-and-drop shopping cart methodology using VueJS with Webpack 4.
+## A drag-and-drop shopping cart.
+
+This is a drag-and-drop shopping cart that is using VueJS, Webpack 4, Babel, and Foundation 5 for the grid.
 
 Created by Chad Ridings
 

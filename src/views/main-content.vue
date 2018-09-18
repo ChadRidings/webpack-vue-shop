@@ -8,6 +8,7 @@
 
 <style lang="scss">
     .row { max-width: 1170px; }
+    
     .main-content {
         margin: 0 auto;
         max-width: 1170px;

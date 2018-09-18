@@ -44,6 +44,7 @@
         .details { margin: 0 0 30px; }
         .title { margin-top: 30px; text-align: center; }
         .price { color: #d33169; font-weight: bold; text-align: center; }
+        
         .select-box {
             margin-top: 30px;
 
