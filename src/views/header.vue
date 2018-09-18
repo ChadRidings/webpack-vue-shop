@@ -32,9 +32,9 @@
 
         .heading-left {
             display: inline-block;
-            width: calc(100% - 270px);
+            width: calc(100% - 300px);
 
-            @media screen and (max-width: 770px) {
+            @media screen and (max-width: 800px) {
                 display: block;
                 width: 100%;
             }
@@ -43,9 +43,10 @@
         .heading-right {
             display: inline-block;
             padding: 0 10px;
-            width: 260px;
+            width: 290px;
+            vertical-align: top;
 
-            @media screen and (max-width: 770px) {
+            @media screen and (max-width: 800px) {
                 display: block;
                 width: 100%;
             }
@@ -56,7 +57,7 @@
             height: 40px;
             margin: 0 20px;
 
-            @media screen and (max-width: 770px) {
+            @media screen and (max-width: 800px) {
                 display: block;
                 margin: 0 auto;
             }
@@ -65,7 +66,7 @@
         .menu {
             display: inline-block;
 
-            @media screen and (max-width: 770px) {
+            @media screen and (max-width: 800px) {
                 display: block;
                 text-align: center;
             }
